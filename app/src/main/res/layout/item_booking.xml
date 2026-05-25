@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/imgTrain"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:contentDescription="Train"
+        android:src="@android:drawable/ic_menu_myplaces"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTrainName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kereta Argo"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/imgTrain"
+        app:layout_constraintTop_toTopOf="@id/imgTrain"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="12dp" />
+
+    <TextView
+        android:id="@+id/textPassenger"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Penumpang: Nama"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/imgTrain"
+        app:layout_constraintTop_toBottomOf="@id/textTrainName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/textDateTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="20 Apr 2025 • 09:00"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/imgTrain"
+        app:layout_constraintTop_toBottomOf="@id/textPassenger"
+        app:layout_constraintEnd_toStartOf="@id/textPrice"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="6dp"/>
+
+    <TextView
+        android:id="@+id/textSeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seat: 12A"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@id/textDateTime"
+        app:layout_constraintTop_toTopOf="@id/textDateTime"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/textPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IDR 150.000"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textTrainName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

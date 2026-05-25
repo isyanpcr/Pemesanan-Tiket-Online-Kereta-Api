@@ -1,0 +1,36 @@
+# Gradle
+.gradle/
+build/
+
+# Local config
+local.properties
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated files
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Kotlin
+.kotlin/
+
+# Logs
+*.log
+
+# Keystore (optional, penting kalau ada signing)
+*.jks
+*.keystore
+
+# Firebase / Google Services (optional kalau rahasia)
+google-services.json
+
+# Mac/Linux temp
+*.swp
+*.swo

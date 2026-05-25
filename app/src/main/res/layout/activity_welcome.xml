@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_welcome_gradient"
+    tools:context=".HalamanAwal">
+
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#330086E0"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="6"
+        android:text="🚆 SumBar Ekspres"
+        android:textColor="@color/btn_blue"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="64dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/btn_blue"
+        android:alpha="0.95"
+        app:layout_constraintTop_toBottomOf="@id/tvAppTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWelcomeDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Selamat datang di SumBar Ekspres — solusi perjalanan kereta api untuk seluruh Sumatera Barat."
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:lineSpacingExtra="3dp"
+        android:alpha="0.95"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAppTitle" />
+
+    <!-- Grid Menu -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/menuGrid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        android:padding="8dp"
+        app:columnCount="3"
+        app:useDefaultMargins="true"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/btn_blue"
+            android:text="Bangun Ruang"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            android:paddingHorizontal="4dp"
+            android:layout_marginBottom="12dp"
+            app:layout_gravity="fill_horizontal"
+            app:layout_row="0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:paddingHorizontal="4dp"
+            android:layout_marginBottom="12dp"
+            android:text="Halaman 1"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/btn_blue"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="Halaman 2"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:layout_marginBottom="12dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/btn_blue"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="Halaman 3"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/btn_blue"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="Dashboard"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/btn_blue"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="Web View"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/btn_blue"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="Wiki ONNX"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/btn_blue"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button10"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="API View  1"
+            android:textAllCaps="false"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/btn_blue"
+            app:layout_columnWeight="0"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button11"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="API View  2"
+            android:textAllCaps="false"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/btn_blue"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button12"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:text="Pemesanan"
+            android:textAllCaps="false"
+            android:textSize="11.2sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/btn_blue"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button13"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:text="Generate QR Code"
+            android:textAllCaps="false"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/btn_blue"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button14"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:text="Scan QR Code"
+            android:textAllCaps="false"
+            android:textSize="10sp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/btn_blue"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill_horizontal" />
+    </androidx.gridlayout.widget.GridLayout>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="308dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/black"
+        android:elevation="6dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        app:cornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menuGrid" />
+
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif"
+        android:text="© 2025 SumBar Ekspres"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button5"
+        app:layout_constraintVertical_bias="0.291" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0076CB</color>
+    <color name="blue_light">#4DA8DA</color>
+    <color name="blue_medium">#0076CB</color>
+    <color name="blue_dark">#005A9E</color>
+    <color name="blue_deep">#003F73</color>
+    <color name="blue_sky">#5BBEF2</color>
+    <color name="blue_ocean">#006F9E</color>
+    <color name="blue_soft">#A6D9F7</color>
+    <color name="blue_navy">#001F54</color>
+    <color name="blue_gray">#5C7D99</color>
+    <color name="blue_accent">#009EFF</color>
+    <color name="btn_blue">#0076CB</color>
+    <color name="btn_blue_pressed">#0066B3</color>
+    <color name="bg_welcome">#F5F9FF</color>
+    <color name="accent">#00A1FF</color>
+    <color name="text_primary">#33373A</color>
+    <color name="text_secondary">#888B90</color>
+    <color name="app_primary">#174A87</color>
+    <color name="app_primary_light">#0076CB</color>
+    <color name="app_primary_pressed">#0F3F6B</color>
+    <color name="app_white">#FFFFFFFF</color>
+    <color name="app_bg">#F4F6FB</color>
+    <color name="app_card_dark">#215D9E</color>
+    <color name="app_text_primary">#174A87</color>
+    <color name="app_text_secondary">#7A8AA6</color>
+    <!-- New theme colors for redesigned welcome screen -->
+    <color name="gradient_start">#0B3D91</color>
+    <color name="gradient_end">#00C3FF</color>
+    <color name="cta_start">#0096FF</color>
+    <color name="cta_end">#0055CC</color>
+    <color name="card_surface">#FFFFFFFF</color>
+    <color name="muted">#E6F1F8</color>
+    <color name="success">#28A745</color>
+    <color name="danger">#E53E3E</color>
+    <!-- Added richer palette for new UI -->
+    <color name="purple_deep">#5B2E8A</color>
+    <color name="purple_soft">#8E6FC1</color>
+    <color name="gold">#FFC857</color>
+    <color name="gold_dark">#D4A017</color>
+    <color name="overlay_60">#99000000</color>
+    <color name="glass">#F7FBFF</color>
+    <color name="cta_shadow">#33005599</color>
+</resources>

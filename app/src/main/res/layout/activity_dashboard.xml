@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+    <!-- Toolbar (sama seperti activity_halaman1.xml) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_primary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title=""
+        app:subtitleTextColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- Top user pill -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/top_pill"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="#174A87">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp">
+
+                    <ImageView
+                        android:id="@+id/top_avatar"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/user"
+                        android:contentDescription="avatar"
+                        android:scaleType="centerCrop"
+                        android:layout_marginEnd="12dp"
+                        android:adjustViewBounds="true"
+                        android:cropToPadding="true" />
+
+                    <TextView
+                        android:id="@+id/tv_username_pill"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="1"
+                        android:text="Username"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/ic_bell"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_dialog_info"
+                        android:contentDescription="notif"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/segmented"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/app_white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="4dp">
+
+                    <Button
+                        android:id="@+id/seg_one"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:minHeight="44dp"
+                        android:text="One way"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:textColor="@color/app_white"/>
+
+                    <Button
+                        android:id="@+id/seg_round"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:minHeight="44dp"
+                        android:text="Round"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:textColor="@color/app_text_secondary"/>
+
+                    <Button
+                        android:id="@+id/seg_multi"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:minHeight="44dp"
+                        android:text="Multi-city"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:backgroundTint="@android:color/transparent"
+                        android:textColor="@color/app_text_secondary"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:id="@+id/fragment_offers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Hot offer"
+                        android:textColor="#174A87"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See all"
+                        android:textColor="#7A8AA6"
+                        android:textSize="14sp"
+                        android:padding="4dp"/>
+                </LinearLayout>
+
+                <!-- Horizontal list of offer cards -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Offer card 1 -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="230dp"
+                            android:layout_height="110dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardBackgroundColor="@color/app_white">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:gravity="center_vertical">
+
+                                <!-- Left image / logo area -->
+                                <FrameLayout
+                                    android:layout_width="72dp"
+                                    android:layout_height="72dp"
+                                    android:background="@android:color/darker_gray"
+                                    android:layout_marginEnd="12dp"
+                                    android:clipToPadding="false">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerInside"
+                                        android:src="@android:drawable/ic_menu_gallery"
+                                        android:contentDescription="offer logo" />
+
+                                    <!-- small badge -->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="25%OFF"
+                                        android:textSize="11sp"
+                                        android:textColor="@android:color/white"
+                                        android:paddingLeft="6dp"
+                                        android:paddingRight="6dp"
+                                        android:paddingTop="2dp"
+                                        android:paddingBottom="2dp"
+                                        android:background="#E53935"
+                                        android:layout_gravity="bottom|start"
+                                        android:layout_margin="6dp"/>
+                                </FrameLayout>
+
+                                <!-- Right text area -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="25% discount with mastercard"
+                                        android:textColor="#21334A"
+                                        android:textSize="14sp"
+                                        android:fontFamily="sans-serif-medium"
+                                        android:maxLines="2"
+                                        android:ellipsize="end"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Limited time"
+                                        android:textColor="#7A8AA6"
+                                        android:textSize="12sp"
+                                        android:layout_marginTop="6dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <!-- Offer card 2 (example, duplicate styling) -->
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="230dp"
+                            android:layout_height="110dp"
+                            android:layout_marginEnd="12dp"
+                            app:cardCornerRadius="12dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true"
+                            app:cardBackgroundColor="@color/app_white">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:padding="12dp"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="72dp"
+                                    android:layout_height="72dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:scaleType="centerInside"
+                                    android:src="@android:drawable/ic_menu_gallery"
+                                    android:contentDescription="offer logo"/>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="33% OFF with VISA"
+                                        android:textColor="#21334A"
+                                        android:textSize="14sp"
+                                        android:fontFamily="sans-serif-medium"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="On selected routes"
+                                        android:textColor="#7A8AA6"
+                                        android:textSize="12sp"
+                                        android:layout_marginTop="6dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

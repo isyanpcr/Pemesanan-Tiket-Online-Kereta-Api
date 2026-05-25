@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_welcome"
+    tools:context=".WikiONNX.tab3">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Input Data"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_fertilizer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fertilizer"
+                android:inputType="numberDecimal"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Temperature"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_n"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nitrogen (N)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phosphorus (P)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Potassium (K)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPrediksi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prediksi"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hasil: -"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

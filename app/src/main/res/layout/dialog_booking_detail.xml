@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/dialog_imgTrain"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Train photo"
+            android:src="@android:drawable/ic_menu_myplaces" />
+
+        <TextView
+            android:id="@+id/dialog_textBookingId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Booking ID:"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialog_textPassenger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Penumpang:" />
+
+        <TextView
+            android:id="@+id/dialog_textTrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kereta:" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/dialog_textDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tanggal:" />
+
+            <TextView
+                android:id="@+id/dialog_textTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jam:" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/dialog_textSeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kursi:"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:id="@+id/dialog_textPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harga:"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp" />
+
+    </LinearLayout>
+</ScrollView>
